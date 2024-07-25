@@ -299,10 +299,10 @@
     const urlParams = new URLSearchParams(queryString);
     const click_id = urlParams.get('click_id');
    const extra_id = urlParams.get('source');
-	const extra_id = urlParams.get('pub_id');
+	const pub_iid = urlParams.get('pub_id');
 
 
-var x = "https://redirect.appmetrica.yandex.com/serve/28888598556225485?click_id="+click_id+"&source="+source+"&pub_id="+pub_id+"";
+var x = "https://redirect.appmetrica.yandex.com/serve/28888598556225485?click_id="+click_id+"&source="+extra_id+"&pub_id="+pub_iid+"";
 	
     document.getElementById('contact_link1').href = x;
     document.getElementById('contact_link2').href = x;
