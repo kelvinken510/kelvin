@@ -298,6 +298,19 @@
     });
 </script>
 <script>
+    let getCountryCode = '';
+    document.addEventListener("DOMContentLoaded", function() {
+    fetch('https://ipinfo.io/json?token=020a16eafb10a6')
+        .then(response => response.json())
+        .then(data => {
+           return getCountryCode = data.country
+        })
+        .catch(error => {
+            console.error('Error fetching the country code:', error);
+        });
+});
+
+    console.log(getCountryCode, '****************************');
  const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const click_id = urlParams.get('SUBID');
