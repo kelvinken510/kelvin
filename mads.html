@@ -298,19 +298,41 @@
     });
 </script>
 <script>
-    let getCountryCode = '';
-    document.addEventListener("DOMContentLoaded", function() {
-    fetch('https://ipinfo.io/json?token=020a16eafb10a6')
+let countryCode = '';
+
+// Function to fetch the country code
+function fetchCountryCode() {
+    return fetch('https://ipinfo.io/json?token=YOUR_API_TOKEN')
         .then(response => response.json())
         .then(data => {
-           return getCountryCode = data.country
+            countryCode = data.country; // Save the country code in the variable
+            document.getElementById('country-code').textContent = countryCode;
+            return countryCode; // Return the country code for further use
         })
         .catch(error => {
             console.error('Error fetching the country code:', error);
-        });
+            document.getElementById('country-code').textContent = 'Unable to retrieve country code.';
+            return null; // Return null in case of an error
+        });
+}
+
+// Wait for the DOM to load before fetching the country code
+document.addEventListener("DOMContentLoaded", function() {
+    fetchCountryCode().then(code => {
+        if (code) {
+            // You can use the country code here or in any other function
+            console.log('Country code is:', code);
+            // Example usage in another function
+            anotherFunctionUsingCountryCode();
+        }
+    });
 });
 
-    console.log(getCountryCode, '****************************');
+// Example of another function using the country code
+function anotherFunctionUsingCountryCode() {
+    console.log('Country code inside another function:', countryCode);
+    // Perform any actions based on the country code
+}
  const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const click_id = urlParams.get('SUBID');
