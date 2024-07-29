@@ -306,12 +306,10 @@ function fetchCountryCode() {
         .then(response => response.json())
         .then(data => {
             countryCode = data.country; // Save the country code in the variable
-            document.getElementById('country-code').textContent = countryCode;
             return countryCode; // Return the country code for further use
         })
         .catch(error => {
             console.error('Error fetching the country code:', error);
-            document.getElementById('country-code').textContent = 'Unable to retrieve country code.';
             return null; // Return null in case of an error
         });
 }
