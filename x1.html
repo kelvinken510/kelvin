@@ -9,7 +9,23 @@
     <link rel="stylesheet" href="style.css">
     <meta name="robots" content="noindex">
 </head>
-
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1347432323216739');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1347432323216739&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <body oncontextmenu="return false;" onkeydown="return false;" onmousedown="return false;">
     <div class="wrapper">
         <div class="header">
@@ -35,8 +51,9 @@
                 <p>Rated for 18+</p>
             </div>
         </div>
-        <div class="actions-block">
-            <a id="contact_link1"  class=" btn install-btn">Install</a>
+        <div class="actions-block
+            <a href="https://redirect.appmetrica.yandex.com/serve/1182143817256605588" class="btn install-btn" onclick="('track', 'ViewContent', { content_name: 'App Download' });">Install</a>
+
             <a id="contact_link2" class="btn" >
             </a>
             <a id="contact_link3"  class="wishlist-btn">
@@ -297,23 +314,7 @@
         LUT.showElement("lut-android-dialog-overlay");
     });
 </script>
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1347432323216739');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1347432323216739&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
 <script
      document.getElementById('contact_link1').addEventListener('click', function() {
     fbq('track', 'DownloadButtonClick');
